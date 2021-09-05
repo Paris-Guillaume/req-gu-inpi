@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="container" id="result-container">
+        <div class="row">
+            <div class="col-lg pt-3">
+                <div class="row">
+                    <div class="col-lg-3">Nom Entreprise</div>
+                    <div class="col-lg-3">SIREN</div>
+                    <div class="col-lg-2">Date de Création</div>
+                </div>
+                {% for companie in search_result.unitesLegales %}
+                    {% if loop.index < 10 %}
+                        <div class="row">
+                            <div class="col-lg-3">{{ companie.periodesUniteLegale[0].denominationUniteLegale }}</div>
+                            <div class="col-lg-3">{{ companie.siren }}</div>
+                            <div class="col-lg-2">{{ companie.dateCreationUniteLegale }}</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

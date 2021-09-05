@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="container" id="result-container">
+        <div class="row">
+            <div class="col-lg pt-3">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <label for="companie_name">Nom de l'entreprise</label>
+                            <input type="text" class="form-control" id="companie_name" name="companie_name" value="{{ search_result.etablissement.uniteLegale.denominationUniteLegale }}" />
+                        </div>
+
+                        <div class="form-groupe col-lg-6">
+                            <label for="companie_creation">Date de création</label>
+                            <input type="text" class="form-control" id="companie_creation" name="companie_creation" value="{{ search_result.etablissement.dateCreationEtablissement }}" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <label for="companie_siren">Siren</label>
+                            <input type="text" class="form-control" id="companie_siren" name="companie_siren" value="{{ search_result.etablissement.siren }}" />
+                        </div>
+
+                        <div class="form-groupe col-lg-6">
+                            <label for="companie_nic">NIC</label>
+                            <input type="text" class="form-control" id="companie_nic" name="companie_nic" value="{{ search_result.etablissement.nic }}" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-lg-12">
+                            <label for="companie_address">Siren</label>
+                            <input type="text" class="form-control" id="companie_address" name="companie_address"
+                                   value="{{ search_result.etablissement.adresseEtablissement.numeroVoieEtablissement
+                                   ~ ' ' ~ search_result.etablissement.adresseEtablissement.typeVoieEtablissement
+                                   ~ ' ' ~ search_result.etablissement.adresseEtablissement.libelleVoieEtablissement }}" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-lg-6">
+                            <label for="companie_zip">Code Postal</label>
+                            <input type="text" class="form-control" id="companie_zip" name="companie_zip" value="{{ search_result.etablissement.adresseEtablissement.codePostalEtablissement }}" />
+                        </div>
+
+                        <div class="form-groupe col-lg-6">
+                            <label for="companie_city">Ville</label>
+                            <input type="text" class="form-control" id="companie_city" name="companie_city" value="{{ search_result.etablissement.adresseEtablissement.libelleCommuneEtablissement }}" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
